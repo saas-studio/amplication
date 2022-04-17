@@ -72,6 +72,7 @@ export class UserControllerBase {
     return await this.service.create({
       data: data,
       select: {
+        comments: true,
         createdAt: true,
         firstName: true,
         id: true,
@@ -112,6 +113,7 @@ export class UserControllerBase {
     const results = await this.service.findMany({
       ...args,
       select: {
+        comments: true,
         createdAt: true,
         firstName: true,
         id: true,
@@ -151,6 +153,7 @@ export class UserControllerBase {
     const result = await this.service.findOne({
       where: params,
       select: {
+        comments: true,
         createdAt: true,
         firstName: true,
         id: true,
@@ -211,6 +214,7 @@ export class UserControllerBase {
         where: params,
         data: data,
         select: {
+          comments: true,
           createdAt: true,
           firstName: true,
           id: true,
@@ -251,6 +255,7 @@ export class UserControllerBase {
       return await this.service.delete({
         where: params,
         select: {
+          comments: true,
           createdAt: true,
           firstName: true,
           id: true,
